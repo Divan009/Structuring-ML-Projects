@@ -20,10 +20,10 @@ _When training a neural network, try not to use early stopping. It's not a bad t
 
 This is used to improve your efficiency or the efficiency of your team in making those decisions. It tells you quickly if the new thing you just tried is working better or worse than your last idea
 
-| Classifier | Precision | Recall|
-|----------|-----------|-------|
-| A  | 95% | 90% |
-| B | 98% | 85 |
+| Classifier | Precision | Recall| F1 score |
+|----------|-----------|-------|-----------|
+| A  | 95% | 90% | 92.4% |
+| B | 98% | 85 | 91.0% |
 
 The definition of **precision** is, of the examples that your classifier recognizes as cats, **What percentage actually are cats?** If classifier A has 95% precision, this means that when classifier A says something is a cat, there's a 95% chance it really is a cat.
 
