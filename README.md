@@ -47,6 +47,39 @@ Let's say that you've decided you care about the classification accuracy of your
 
 So you could instead do is that you might want to choose a classifier that **maximizes accuracy** but subject to that the running time, that is the time it takes to classify an image, that that has to be **less than or equal to 100 milliseconds**. 
 So in this case we would say that **accuracy is an optimizing metric** because you want to maximize accuracy. You want to do as well as possible on accuracy but that **running time is what we call a satisficing metric**. Meaning that it just has to be good enough, it just needs to be less than 100 milliseconds and beyond that you don't really care, or at least you don't care that much.
+If the running time is less that 100 milliseconds, your users won't care that much whether it's 100 milliseconds or 50 milliseconds or even faster. And by defining optimizing as well as satisficing matrix, this gives you a clear way to pick the, best classifier, which in this case would be _classifier B_ because of all the ones with a running time better than 100 milliseconds it has the best accuracy.
+So, if you have N matrix that you care about it's sometimes reasonable to pick one of them to be optimizing and do as well as is possible on that one. And then N-1 to be satisficing, meaning that so long as they reach some threshold such as running times faster than 100 milliseconds.
+
+To summarize, **if there are multiple things you care about** by say there's one as the optimizing metric that you want to do as well as possible on and one or more as satisficing metrics where you'll be satisfice. Now these evaluation matrix must be evaluated or calculated on a training set or a development set or maybe on the test set. So one of the things you also need to do is set up training, dev or development, as well as test sets.
+
+## Train/dev/test distributions
+
+The way you set up your training dev, or development sets and test sets, can have a huge impact on how rapidly you or your team can make progress on building machine learning application.
+So, that dev set is also called the development set, or sometimes called the hold out cross validation set. And, workflow in machine learning is that you try a lot of ideas, train up different models on the training set, and then use the dev set to evaluate the different ideas and pick one. And, keep innovating to improve dev set performance until, finally, you have one clause that you're happy with that you then evaluate on your test set. 
+
+For example, you're building a cat crossfire, and you are operating in these regions:USA, UK, other European countries, South America, India, China, other Asian countries, and Australia. So, how do you set up your dev set and your test set? Well, one way you could do so is to pick first four of these regions into the dev set. And, the next four regions, will go into the test set. It turns out, this is _a very bad idea_ because in this example, your **dev and test sets come from different distributions**.
+
+Another real life example I know is of a machine learning team that actually spent several months optimizing on a dev set which was comprised of loan approvals for medium income zip codes. So, the specific machine learning problem was, "Given an input X about a loan application, can you predict why and which is, whether or not, they'll repay the loan?" So, this helps you decide whether or not to approve a loan. And so, the dev set came from loan applications. They came from medium income zip codes. But, after working on this for a few months, the team then, suddenly decided to test this on data from low income zip codes or low income postal codes. And, of course, **the distributional data for medium income and low income zip codes is very different**. And, the crossfire, that they spend so much time optimizing in the former case, just didn't work well at all on the latter case.
+
+So, to avoid this, what is recommended instead is that, you **randomly shuffle data** and separate it into the dev and test set. The dev and test sets will have the same distribution, which is the distribution of all of your data mixed together.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
