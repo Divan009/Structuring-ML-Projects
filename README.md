@@ -21,7 +21,7 @@ _When training a neural network, try not to use early stopping. It's not a bad t
 This is used to improve your efficiency or the efficiency of your team in making those decisions. It tells you quickly if the new thing you just tried is working better or worse than your last idea
 
 | Classifier | Precision | Recall| F1 score |
-|----------|-----------|-------|-----------|
+
 | A  | 95% | 90% | 92.4% |
 | B | 98% | 85 | 91.0% |
 
@@ -35,9 +35,15 @@ It is the average of precision, P, and recall, R. The F1 score is defined by thi
 
 So what I found for a lot of machine learning teams is that **having a well-defined dev set**, which is **how you're measuring precision and recall**, plus a single number evaluation metric aka single row number evaluation metric allows you to quickly tell if classifier A or classifier B is better, and therefore having a dev set plus single number evaluation metric distance to speed up iterating. 
 
+## Satisficing and Optimizing metric
 
+Let's say that you've decided you care about the classification accuracy of your cat's classifier, this could have been F1 score or some other measure of accuracy, but let's say that in addition to accuracy you also care about the running time. So how long it takes to classify an image and classifier A takes 80 milliseconds, B takes 95 milliseconds, and C takes 1,500 milliseconds, that's 1.5 seconds to classify an image. So one thing you could do is combine accuracy and running time into an overall evaluation metric. And so the costs such as maybe the overall cost is accuracy minus 0.5 times running time.
 
-
+| Classifier | Accuracy | Running Time | 
+|----------|-----------|-------|
+| A  | 90% | 80ms |
+| B  | 92% | 95ms |
+| C  | 95% | 1500ms |
 
 
 
