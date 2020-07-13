@@ -63,11 +63,11 @@ Another real life example I know is of a machine learning team that actually spe
 
 So, to avoid this, what is recommended instead is that, you **randomly shuffle data** and separate it into the dev and test set. The dev and test sets will have the same distribution, which is the distribution of all of your data mixed together.
 
+## Size of the dev and test sets
 
+In machine learning, you usually 70/30 split data into a train and test set, or you would use a 60% training and 20% dev and 20% tests. In earlier eras of machine learning, this was pretty reasonable, especially back when data set sizes were just smaller like 1000 or 10,000. So if you had a hundred examples in total, these 70/30 or 60/20/20 rule of thumb would be pretty reasonable. 
 
-
-
-
+But in the modern machine learning era, where we now work with much larger data set sizes(>1M). So let's say you have a million training examples, it might be quite reasonable to set up your data so that you have 98% in the training set, 1% dev, and 1% test. So, a 1% of that, is 10,000 examples, which might be enough for a dev set or for a test set. 
 
 
 
