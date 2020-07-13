@@ -45,6 +45,9 @@ Let's say that you've decided you care about the classification accuracy of your
 | B  | 92% | 95ms |
 | C  | 95% | 1500ms |
 
+So you could instead do is that you might want to choose a classifier that **maximizes accuracy** but subject to that the running time, that is the time it takes to classify an image, that that has to be **less than or equal to 100 milliseconds**. 
+So in this case we would say that **accuracy is an optimizing metric** because you want to maximize accuracy. You want to do as well as possible on accuracy but that **running time is what we call a satisficing metric**. Meaning that it just has to be good enough, it just needs to be less than 100 milliseconds and beyond that you don't really care, or at least you don't care that much.
+
 
 
 
