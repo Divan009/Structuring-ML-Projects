@@ -21,7 +21,7 @@ _When training a neural network, try not to use early stopping. It's not a bad t
 This is used to improve your efficiency or the efficiency of your team in making those decisions. It tells you quickly if the new thing you just tried is working better or worse than your last idea
 
 | Classifier | Precision | Recall| F1 score |
-
+|----------|-----------|-------|----|
 | A  | 95% | 90% | 92.4% |
 | B | 98% | 85 | 91.0% |
 
