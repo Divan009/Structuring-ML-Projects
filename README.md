@@ -69,6 +69,36 @@ In machine learning, you usually 70/30 split data into a train and test set, or 
 
 But in the modern machine learning era, where we now work with much larger data set sizes(>1M). So let's say you have a million training examples, it might be quite reasonable to set up your data so that you have 98% in the training set, 1% dev, and 1% test. So, a 1% of that, is 10,000 examples, which might be enough for a dev set or for a test set. 
 
+## Why do we compare ML performance to Human level Performance?
+
+In the last few years, a lot more machine learning teams have been talking about comparing the machine learning systems to human level performance. Why is this? I think there are two main reasons. First is that because of advances in deep learning, machine learning algorithms are suddenly working much better and so it has become much more feasible in a lot of application areas for machine learning algorithms to actually become competitive with human-level performance. Second, it turns out that the workflow of designing and building a machine learning system, the workflow is much more efficient when you're trying to do something that humans can also do.
+
+[pic 1]
+
+So the x-axis is time, this could be many months or even many years over which some team or some research community is working on a problem. **Progress**(purple line) tends to be relatively rapid as you approach human level performance(blue line). But then after a while, the algorithm surpasses human-level performance and then progress and accuracy actually slows down. And, the hope is that it achieves some theoretical optimum level of performance.
+
+You keep training the algorithm, maybe bigger and bigger models on more and more data, the performance approaches but never surpasses some theoretical limit, which is called the **Bayes optimal error**. So Bayes optimal error, think of this as the _best possible error_.
+
+For example, some images are so blurry, that it is just impossible for anyone or anything to tell whether or not there's a cat in that picture. So, the perfect level of accuracy may not be 100%. And Bayes optimal error, or Bayesian optimal error, or sometimes Bayes error for short, is the very best theoretical function for mapping from x to y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
