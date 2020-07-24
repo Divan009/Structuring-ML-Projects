@@ -1,4 +1,4 @@
-# Structuring-ML-Projects
+# How to Structure ML Projects
 _Tips on how to structure your machine learning project from deeplearning.ai_
 
 ## Assumptions in ML
@@ -81,7 +81,7 @@ You keep training the algorithm, maybe bigger and bigger models on more and more
 
 For example, some images are so blurry, that it is just impossible for anyone or anything to tell whether or not there's a cat in that picture. So, the perfect level of accuracy may not be 100%. And Bayes optimal error, or Bayesian optimal error, or sometimes Bayes error for short, is the very best theoretical function for mapping from x to y
 
-
+## How to Avoid Biases
 
 
 
