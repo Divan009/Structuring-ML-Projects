@@ -83,7 +83,24 @@ For example, some images are so blurry, that it is just impossible for anyone or
 
 ## How to Avoid Biases
 
-![hello](microsoft-azure-ml-scholarship/git_images/pic_4.png)
+![](https://github.com/Divan009/Microsoft-Azure-ML-Scholarship/blob/master/Git_images/pic_4.PNG)
+
+We have used Cat classification a lot and given a picture, let's say humans have near-perfect accuracy so the human level error is one percent. If your learning algorithm achieves 8 percent training error and 10 percent dev error, then maybe you wanted to do better on the training set. So, the fact that there's a huge gap between how well your algorithm does on your training set versus how well humans do on the same set, shows that your algorithm isn't even fitting the training set well. Therefore, focus on reducing bias. So, train a bigger neural network or run training set longer, just try to do better on the training set. 
+
+So in a different application or maybe on a different data set, let's say that human level error is actually 7.5%. Maybe the images in your data set are so blurry that even humans can't tell whether there's a cat in this picture. Let's say your data sets images are so blurry or so low resolution that even humans get 7.5% error. In this case, even though your training error and dev error are the same as the other example, you see that maybe you're actually doing just fine on the training set. It's doing only a little bit worse than human level performance. And in this second example, you would maybe want to focus on reducing this component, reducing the variance in your learning algorithm. So you might try regularization to try to bring your dev error closer to your training error for example. 
+
+So to explain what just happened here, for our Cat classification example, think of human level error as a proxy or as a estimate for Bayes error or for Bayes optimal error. And for computer vision tasks, this is a pretty reasonable proxy because humans are actually very good at computer vision and so whatever a human can do is maybe not too far from Bayes error. 
+By definition, human level error is worse than Bayes error because nothing could be better than Bayes error but human level error might not be too far from Bayes error. 
+
+So the surprising thing we saw here is that depending on what human level error is or really this is really approximately Bayes error or so we assume it to be, but depending on what we think is achievable, with the same training error and dev error in these two cases, we decided to focus on bias reduction tactics or on variance reduction tactics.
+
+And what happened is in the example on the left, 8% training error is really high when you think you could get it down to 1% and so bias reduction tactics could help you do that. 
+
+Whereas in the example on the right, if you think that Bayes error is 7.5% and here we're using human level error as an estimate or as a proxy for Bayes error, but you think that Bayes error is close to seven point five percent then you know there's not that much headroom for reducing your training error further down. You don't really want it to be that much better than 7.5% because you could achieve that only by maybe starting to offer further training so, and instead, there's much more room for improvement in terms of taking this 2% gap and trying to reduce that by using variance reduction techniques such as regularization or maybe getting more training data. 
+
+So to give these things a couple of names, we are going to call the difference between Bayes error or approximation of Bayes error and the training error to be the **avoidable bias**. So what you want is maybe _keep improving your training performance until_ you get down to Bayes error but you _don't actually want to do better than Bayes error_. You **can't actually do better than Bayes error unless you're overfitting**. 
+
+The difference between your training area and the dev error, there's a measure still of the variance problem of your algorithm. And the term avoidable bias acknowledges that there's some bias or some minimum level of error that you just cannot get below which is that if Bayes error is 7.5%, you don't actually want to get below that level of error. 
 
 
 
