@@ -83,9 +83,7 @@ For example, some images are so blurry, that it is just impossible for anyone or
 
 ## How to Avoid Biases
 
-
-
-
+![hello](microsoft-azure-ml-scholarship/git_images/pic_4.png)
 
 
 
