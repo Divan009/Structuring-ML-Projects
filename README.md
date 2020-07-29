@@ -102,6 +102,10 @@ So to give these things a couple of names, we are going to call the difference b
 
 The difference between your training area and the dev error, there's a measure still of the variance problem of your algorithm. And the term avoidable bias acknowledges that there's some bias or some minimum level of error that you just cannot get below which is that if Bayes error is 7.5%, you don't actually want to get below that level of error. 
 
+## What is Human level Performance?
+
+![](https://github.com/Divan009/Microsoft-Azure-ML-Scholarship/blob/master/Git_images/pic_5.PNG)
+
 
 
 
